@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
+@import url('https://fonts.googleapis.com/css?family=poppins');
+
+body{text-align:center}
+.parent{
+  height: 30%;
+  width: 100%;
+  position: relative;
+}
+.d{display:block;position:absolute}
+
+.container{
+  width:420px;
+  height:420px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%)
+  }
+
+h1{
+  color: #e8aaaa;
+  background:#FFFDF1;
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+  font-family:'Titan One',cursive;
+  font-size:60px;
+  font-weight:700;
+  flex-flow:row wrap;
+  align-content:center;
+  justify-content:center
+  }
+
+h1 span{width:100%;position:relative}
+
+h1 span:before{
+  background:linear-gradient(45deg,#f45d7b,#6a82fb#E4D6F5 );
+  width:100%;
+  height:100%;
+  display:block;
+  position:absolute;
+  content:"";
+  mix-blend-mode:screen
+  }
+
+[class*="blobs"]
+  {mix-blend-mode:color;animation:blobs 7s ease-in-out infinite alternate}
+
+.blobs_1{
+  background: #fd6731;
+  width:60px;
+  height:60px;
+  top:150px;
+  left:200px
+  }
+
+.blobs_2{
+  background:#f79429;
+  width:80px;
+  height:80px;
+  top:155px;
+  left:230px
+  }
+
+.blobs_3{
+  background:#f35e74;
+  width:60px;
+  height:60px;
+  top:155px;
+  left:20px
+  }
+
+.blobs_4{
+  background:#615165;
+  width:100px;
+  height:100px;
+  top:125px;
+  left:100px
+  }
+
+.blobs_5{
+  background:#8a0e0e;
+  width:100px;
+  height:150px;
+  top:205px;
+  left:310px
+  }
+
+.blobs_6{
+  background:#9e4e14;
+  width:60px;
+  height:60px;
+  top:220px;
+  left:55px
+  }
+
+.blobs_7{
+  background:#b9dde8;
+  width:50px;
+  height:50px;
+  top:210px;
+  left:180px
+  }
+
+@keyframes blobs{
+  0%{border-radius:26% 74% 61% 39% / 54% 67% 33% 46%}
+  10%{border-radius:74% 26% 47% 53% / 68% 46% 54% 32%}
+  20%{border-radius:48% 52% 30% 70% / 27% 37% 63% 73%}
+  30%{border-radius:73% 27% 57% 43% / 28% 67% 33% 72%}
+  40%{border-radius:63% 37% 56% 44% / 25% 28% 72% 75%}
+  50%{border-radius:39% 61% 70% 30% / 61% 29% 71% 39%}
+  60%{border-radius:27% 73% 29% 71% / 73% 51% 49% 27%}
+  70%{border-radius:39% 61% 65% 35% / 74% 65% 35% 26%}
+  80%{border-radius:55% 45% 37% 63% / 38% 30% 70% 62%}
+  90%{border-radius:25% 75% 70% 30% / 39% 50% 50% 61%}
+  100%{border-radius:66% 34% 33% 67% / 65% 73% 27% 35%}
+  }
+  /* Horoscope class (main container) */
+  .sec-head{
+    color:#f0795b;
+    position: absolute;
+    top:6.5rem;
+    font-family:'poppins';
+
+  }
+.horoscope {
+  height: 100%;
+  width: 100%;
+  color:#582828;
+    overflow: hidden;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color:#FFFDF1;
+    /* padding: 20px; */
+    /* border-radius: 10px; */
+    
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+  }
+  .arrow{
+    z-index: 1;
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    width: 2rem;
+    height: 2rem;
+    color: white;
+    filter:drop-shadow(0px 0px 5px #582828);
+    cursor: pointer;
+  }
+  .arrow-left{
+    left: 1.5rem;
+  }
+  .arrow-right{
+    right: 1.5rem;
+  }
+  /* Zodiac-Signs class (container for zodiac signs) */
+  .zodiac-signs {
+    /* border: 1px solid black; */
+    font-size: 20px;
+    position: relative;
+    color:#f0795b;
+    font-family: 'poppins';
+    height: 100%;
+    width: 100%;
+    overflow-y:hidden ;
+  }
+  
+  /* Zodiac class (individual zodiac sign) */
+  .zodiac {
+    background-color:#FFFDF1;
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .zodiac-hidden{
+    display: none;
+  }
+  .img-container{
+    /* padding: 0.5rem; */
+    background-color:#FFFDF1;
+    height: 60%;
+  }
+  .img-container2{
+    height: 100%;
+    background-color: #FFFDF1;
+    /* width: 60%; */
+    margin: auto;
+    overflow: hidden;
+  }
+  .zodiac-img{
+    height: 100%;
+    width: 100%;
+    object-fit:contain;
+    margin-top: 0.5rem;
+    /* display: none; */
+    transform: scale(1.4);
+    
+  }
+  .zodiac:hover {
+    cursor: pointer;
+  }
+  .zodiac-des{
+    font-family: 'poppins';
+    margin: 1rem;
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    
+  }
+  .horoscope-des-back{
+    color: rgb(249, 249, 167);
+    padding: 1rem;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background:url("https://cdn.pixabay.com/photo/2017/07/23/22/27/starry-sky-2533009_1280.jpg");
+    background-size: cover;
+    background-position: center;
+    
+  }
+  
+  .horoscope-des{
+    margin: 2rem;
+    /* height: 80%;
+    width:60%; */
+    background-color: rgba(116, 19, 84, 0.1);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  padding: 1rem;
+  border-radius: 30px;
+
+  }
+  .sign-head{
+    font-size: 2rem;
+  }
+  .btn{
+    border-radius: 1rem;
+    border: none;
+    padding: 0.2rem  0.5rem;
+    color: rgb(192, 239, 255);
+    background-color: #231c5b;
+    cursor: pointer;
+  }
+  .btn:hover{
+    color: #231c5b;
+    background-color: rgb(192, 239, 255);
+  }
